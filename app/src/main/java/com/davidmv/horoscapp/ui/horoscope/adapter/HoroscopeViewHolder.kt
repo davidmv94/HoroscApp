@@ -6,11 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.davidmv.horoscapp.databinding.ItemHoroscopeBinding
 import com.davidmv.horoscapp.domain.model.HoroscopeInfo
 
-/*
-** Coded by David Montes on 22/10/2023.
-** https://github.com/davidthar
-*/
-
 class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val binding = ItemHoroscopeBinding.bind(view)
@@ -22,7 +17,6 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         binding.parent.setOnClickListener{
             startRotationAnimation(binding.ivHoroscope, newLambda = {onItemSelected(horoscopeInfo)})
-            onItemSelected(horoscopeInfo)
         }
     }
 
