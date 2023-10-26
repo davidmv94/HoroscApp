@@ -17,7 +17,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.davidmv.horoscapp.CustomTestRunner"
     }
 
     buildTypes {
@@ -63,15 +63,6 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-
-    //Testing
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.4.2")
-    testImplementation ("io.mockk:mockk:1.12.3")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-
     //NavComponent
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
@@ -91,6 +82,11 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:${cameraVersion}")
     implementation("androidx.camera:camera-view:${cameraVersion}")
     implementation("androidx.camera:camera-extensions:${cameraVersion}")
+
+    //Unit Testing
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.4.2")
+    testImplementation ("io.mockk:mockk:1.12.3")
 
     //UITesting
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
