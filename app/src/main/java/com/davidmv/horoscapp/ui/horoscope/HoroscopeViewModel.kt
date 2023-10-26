@@ -9,11 +9,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
-/*
-** Coded by David Montes on 22/10/2023.
-** https://github.com/davidthar
-*/
-
 @HiltViewModel
 class HoroscopeViewModel @Inject constructor(horoscopeProvider: HoroscopeProvider) : ViewModel() {
 
